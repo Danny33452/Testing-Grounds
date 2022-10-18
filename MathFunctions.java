@@ -1,12 +1,8 @@
-import java.beans.PropertyEditorSupport;
-
 /**
- *
- * AP Comp Sci A, Fall 2022
+  * AP Comp Sci A, Fall 2022
  * iDea HS
  * @author Daniel
  * @version Oct 18 2022
- *
  */
 public class MathFunctions {
     public static void main(String[] args) {
