@@ -9,7 +9,7 @@
 public class Song {
     public static void main(String[] args) {
         int i;
-        for(i=99;i>=0;i--){
+        for(i=99;i>=1;i--){
             line(i);
         }
     }
