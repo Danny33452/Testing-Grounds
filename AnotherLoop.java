@@ -2,7 +2,7 @@ import static java.lang.System.*;
 
 public class AnotherLoop {
     public static void main(String[] args) {
-      int lineAmount=30;
+      int lineAmount=25;
       pyrimid(lineAmount);
     }
     public static void pyrimid(int lineAmount){
