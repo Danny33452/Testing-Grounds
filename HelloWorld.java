@@ -4,7 +4,7 @@ import static java.lang.System.out;
  * @author Daniel
  * @version v1
  */
-public class Main {
+public class HelloWorld {
     public static void main(String[] args){
         out.println("Hello World!");
     }
