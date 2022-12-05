@@ -76,51 +76,42 @@ public class ifPartnerPractice {
         boolean negativex;
         boolean negativey;
         String output;
-        if(xcoord<0){
-            negativex = true;
-        }else{
-            negativex = false;
-        }
-        if(ycoord<0){
-            negativey = true;
-        }else{
-            negativey = false;
-        }
+        negativex = xcoord < 0;
+        negativey = ycoord < 0;
         if (negativex){
             if(negativey){
                 output = "Quad 3";
-                return output;
             }
             else{
                 output = "Quad 2";
-                return output;            }
+            }
+            return output;
         }else{
             if(negativey){
                 output = "Quad 4";
-                return output;
             }
             else{
                 output = "Quad 1";
-                return output;
             }
+            return output;
         }
     }
     public static void sameQuad(double xcoordOne, double ycoordOne, double xcoordTwo, double ycoordTwo){
         if(quadrant(xcoordOne,ycoordOne).equals(quadrant(xcoordTwo,ycoordTwo))){
-            System.out.println("They are in the same quadrant");
+            System.out.println("They are both in " + quadrant(xcoordOne,ycoordOne));
         }else{
             System.out.println("They arent in the same quadrant");
         }
     }
     public static String wordBuilder(int numberOfItems) {
-        String word = "";
+        StringBuilder word = new StringBuilder();
         Scanner console = new Scanner(System.in);
         for (int i = 0; i < numberOfItems; i++){
             System.out.print("Item " + (i+1) + " name: ");
-            word += console.nextLine();
+            word.append(console.nextLine());
             System.out.println();
         }
-        return word;
+        return word.toString();
     }
     public static void billTotal(int itemAmount){
         Scanner console = new Scanner(System.in);
@@ -135,7 +126,7 @@ public class ifPartnerPractice {
     }
     public static void mandatoryTip(int partySize){
         double total = 0;
-        double tipAmount = 0;
+        double tipAmount;
         Scanner console = new Scanner(System.in);
         for(int i = 0; i<partySize; i++){
             System.out.print("Person " + i + ": " );
